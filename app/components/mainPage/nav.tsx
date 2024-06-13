@@ -1,15 +1,16 @@
 // components/NavBar.js
 
+import { dancing_script } from '@/app/font/font';
 import Link from 'next/link';
 
 const Nav = () => {
   return (
-    <nav className="bg-slate-900 text-white shadow-md py-4">
+    <nav className=" bg-gradient-to-br from-zinc-800 via-zinc-900 to-black text-white shadow-md py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo or Artist's Name */}
         <div className="flex-shrink-0">
-          <Link className="font-bold text-2xl" href="/">
-            Tattoo Studio
+          <Link className={`${dancing_script.className} font-bold text-3xl`} href="/">
+            Mario&#39;s Studio
           </Link>
         </div>
 

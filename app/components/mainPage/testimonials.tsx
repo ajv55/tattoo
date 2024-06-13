@@ -1,0 +1,43 @@
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import Background from '../background';
+
+const testimonials = [
+  {
+    text: "Working with [Artist's Name] was an incredible experience. Their attention to detail and creative vision turned my tattoo idea into a work of art!",
+    author: "Client 1"
+  },
+  {
+    text: "Highly recommend [Artist's Name] for anyone looking for top-notch tattoo work. Professional, friendly, and extremely talented!",
+    author: "Client 2"
+  }
+];
+
+const Testimonials = () => {
+  return (
+    <div className="bg-gradient-to-r flex flex-col justify-center items-center relative from-black via-zinc-900 to-black py-24 px-4 sm:px-6 lg:px-8 text-center text-white">
+        <Background />
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12">What Our Clients Say</h2>
+        <div className="space-y-16 z-30">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.3 }}
+              className="bg-black bg-opacity-25 border border-zinc-800 p-8 rounded-xl shadow-lg"
+            >
+              <FaQuoteLeft className=" text-3xl mb-4 inline-block" />
+              <p className="text-lg text-orange-400 font-semibold mb-4">{testimonial.text.replace("[Artist's Name]", 'Mario')}</p>
+              <FaQuoteRight className=" text-3xl mt-4 inline-block" />
+              <p className="mt-6 text-orange-400 font-bold">- {testimonial.author}</p>
+            </motion.div>
+          ))}
+        </div>
+    </div>
+  );
+};
+
+export default Testimonials;

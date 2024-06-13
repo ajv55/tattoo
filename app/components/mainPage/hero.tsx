@@ -10,7 +10,7 @@ const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className={` bg-gradient-to-br relative from-black via-zinc-900 to-black py-24 px-4 sm:px-6 lg:px-8 text-center text-white`}
+      className={` bg-gradient-to-r relative from-black via-zinc-900 to-black py-24 px-4 sm:px-6 lg:px-8 text-center text-white`}
     >
         <Background />
       <div className="max-w-4xl mx-auto">

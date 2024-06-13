@@ -5,10 +5,13 @@ import Background from './components/background';
 import Nav from './components/mainPage/nav';
 import Portfolio from './components/mainPage/portfolio';
 import WelcomeSection from './components/mainPage/welcome';
+import AboutSection from './components/mainPage/about';
+import ServicesSection from './components/mainPage/service';
+import Testimonials from './components/mainPage/testimonials';
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br  from-black via-zinc-900 to-black text-white">
       <Nav />
 
       <Hero />
@@ -17,26 +20,9 @@ export default function Page() {
         <WelcomeSection />
         
 
-        <section id="about" className="py-20 bg-gray-800">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-8">About Me</h2>
-            <p className="text-lg max-w-2xl mx-auto">I&#39;m John Doe, a professional tattoo artist with over 10 years of experience in creating stunning and unique tattoos. My passion for art and dedication to my craft has allowed me to work with countless clients to bring their tattoo visions to life.</p>
-          </div>
-        </section>
-
-        <section id="gallery" className="py-20 bg-gray-700">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-8">Gallery</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {/* Example images, replace with actual images */}
-              <Image src="/tattoo1.jpg"  alt="Tattoo 1" width={200} height={200} className="w-full h-auto rounded-lg" />
-              <Image src="/tattoo2.jpg" alt="Tattoo 2" width={200} height={200} className="w-full h-auto rounded-lg" />
-              <Image src="/tattoo3.jpg" alt="Tattoo 3" width={200} height={200} className="w-full h-auto rounded-lg" />
-              <Image src="/tattoo4.jpg" alt="Tattoo 4"  width={200} height={200} className="w-full h-auto rounded-lg" />
-            </div>
-          </div>
-        </section>
-
+        <AboutSection />
+        <ServicesSection />
+        <Testimonials />
         <section id="contact" className="py-20 bg-gray-800">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>

@@ -4,15 +4,15 @@ import style from '@/app/styles.module.css';
 
 const Background = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute  inset-0 overflow-hidden">
       <Image 
         src="/curved.svg" 
         layout="fill" 
         objectFit="cover" 
         alt="Curved Lines Background" 
-        className="opacity-10"
+        className="opacity-10 "
       />
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0  overflow-hidden">
         <div className={`${style.beam} ${style.beam1}`}></div>
         <div className={`${style.beam} ${style.beam2}`}></div>
         <div className={`${style.beam} ${style.beam3}`}></div>
