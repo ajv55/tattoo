@@ -42,7 +42,7 @@ const Nav = () => {
 
         {/* Call-to-action Button */}
         <div>
-          <Link className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md" href="/book">
+          <Link className="bg-orange-500 text-center hover:bg-orange-600 text-white font-bold py-2 lg:px-4 px-2 lg:text-xl text-sm rounded-md" href="/book">
            
               Book Your Appointment
           </Link>
