@@ -17,22 +17,9 @@ interface Service {
 const ServicesSection = () => {
 
     const ref = useRef(null);
-    const cardRef = useRef(null)
     const isInView = useInView(ref);
-    const cardInView = useInView(cardRef);
     const mainControls = useAnimation();
 
-    const animateOnHover = {
-        scale: 1.05,
-        boxShadow: '0px 10px 15px rgba(0, 0, 0, 0.3)',
-        transition: { duration: 0.3 },
-      };
-    
-      const animateOnLeave = {
-        scale: 1,
-        boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.2)',
-        transition: { duration: 0.3 },
-      };
 
     useEffect(() => {
         if(isInView) {
@@ -66,7 +53,7 @@ const ServicesSection = () => {
     >
       <Background />
         <h2  className="text-3xl sm:text-4xl  font-bold mb-8">Our Services</h2>
-        <div className="  w-full  h-[20rem] z-30 flex  justify-center items-center gap-16">
+        <div className="  w-full  lg:h-[20rem] h-content z-30 flex lg:flex-row flex-col justify-center items-center gap-16">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -74,7 +61,7 @@ const ServicesSection = () => {
               initial={{scale: 0, opacity: 0}}
               animate={mainControls}
               transition={{duration: 1, type: 'spring', stiffness: 100, delay: 0.5 * index}}
-              className=" bg-gradient-to-b hover:shadow-md hover:shadow-orange-500 hover:cursor-pointer flex flex-col justify-center items-center from-zinc-900 via-zinc-800 to-zinc-900 w-[20%] h-[15rem] rounded-lg p-3 text-center"
+              className=" bg-gradient-to-b hover:shadow-md hover:shadow-orange-500 hover:cursor-pointer flex flex-col justify-center items-center from-zinc-900 via-zinc-800 to-zinc-900 lg:w-[20%] w-[85%] h-[15rem] rounded-lg p-3 text-center"
             >
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-xl  font-bold mb-2">{service.title}</h3>

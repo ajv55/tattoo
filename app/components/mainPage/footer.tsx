@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-black via-zinc-900 to-black py-8 px-4 sm:px-6 lg:px-8 text-white">
+    <footer className="bg-gradient-to-r w-full from-black via-zinc-900 to-black py-8 px-4 sm:px-6 lg:px-8 text-white">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <nav className="flex space-x-4 mb-4">
+        <nav className="flex  space-x-4 mb-4">
           <Link className="text-orange-500 hover:text-orange-400 transition-colors duration-200" href="/">
             Home
           </Link>
@@ -21,8 +21,8 @@ const Footer = () => {
             Contact
           </Link>
         </nav>
-        <p className="text-sm text-gray-400 mb-4">&copy; {new Date().getFullYear()} Abel J.Villareal. All rights reserved.</p>
-        <div className="flex space-x-4">
+        <p className="text-sm  w-full text-center tracking-wider text-gray-400 mb-4">&copy; {new Date().getFullYear()} Abel J.Villareal. All rights reserved.</p>
+        <div className="flex  space-x-4">
           <Link className="text-gray-400 hover:text-gray-300 transition-colors duration-200" href="/terms">
             Terms of Service
           </Link>

@@ -22,7 +22,7 @@ const ContactSection = () => {
       className="bg-gradient-to-r flex w-full justify-evenly items-center relative from-black via-zinc-900 to-black py-16 px-4 sm:px-6 lg:px-8 text-center text-white"
     >
         <Background />
-      <div  className="w-full  flex z-[400] mx-auto">
+      <div  className="w-full  flex lg:flex-row flex-col justify-center items-center z-[400] mx-auto">
         <div className='w-[50%] flex flex-col justify-center items-center'>
         <motion.h2
         variants={{visible: {y: 0, opacity: 1}}}
@@ -72,7 +72,7 @@ const ContactSection = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={mainControls}
           transition={{ duration: 1, delay: 2.5 }}
-          className=" bg-gradient-to-tr shadow-orange-400 from-black to-zinc-900 w-[40%]  p-8 rounded-lg shadow-lg"
+          className=" bg-gradient-to-tr shadow-orange-400 from-black to-zinc-900 lg:w-[40%] w-[89%]  p-8 rounded-lg shadow-lg"
         >
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium text-orange-500">Name</label>
