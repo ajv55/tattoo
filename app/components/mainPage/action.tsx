@@ -21,7 +21,7 @@ const CallToAction = () => {
   return (
     <div
     ref={ref}
-      className="bg-gradient-to-r  relative flex flex-col justify-center items-center  h-[23rem] from-orange-600 via-orange-600 to-orange-600 py-24 px-4 sm:px-6 lg:px-8 text-center text-white"
+      className="bg-gradient-to-r  relative flex flex-col justify-center items-center  h-[23rem] from-[#FF4301] via-orange-600  to-[#FF4301]  py-24 px-4 sm:px-6 lg:px-8 text-center text-white"
     >
         <Background />
      

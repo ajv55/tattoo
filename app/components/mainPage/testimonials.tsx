@@ -40,7 +40,7 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={mainControls}
               transition={{ duration: 0.8, delay: index * 1 }}
-              className="bg-black group hover:bg-gradient-to-br from-orange-700  via-orange-500 to-orange-700 bg-opacity-25 border hover:text-zinc-900 border-zinc-800 p-8 rounded-xl shadow-lg"
+              className="bg-black group hover:bg-gradient-to-br from-[#FF4301] via-orange-600  to-[#FF4301]  bg-opacity-25 border hover:text-zinc-900 border-zinc-800 p-8 rounded-xl shadow-lg"
             >
               <FaQuoteLeft className=" text-3xl mb-4 inline-block" />
               <p className="text-lg text-orange-400 group-hover:text-white font-semibold mb-4">{testimonial.text.replace("[Artist's Name]", 'Mario')}</p>

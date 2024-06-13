@@ -24,8 +24,10 @@ const AboutSection = () => {
         variants={{visible: {scale: 1, opacity: 1}}}
           initial={{ scale: 0.5, opacity: 0 }}
           animate={mainControls}
-          transition={{ duration: 1 }}
-          className="rounded-lg shadow-lg w-full lg:w-1/2 mb-6 lg:mb-0"
+          whileInView={{scale: 1}}
+          whileHover={{scale: 1.05}}
+          transition={{ duration: 1, stiffness: 80, type: 'spring' }}
+          className="rounded-lg z-30 shadow-lg w-full lg:w-1/2 mb-6 lg:mb-0"
           src='/flower.jpg'
           alt="Artist in action"
         />
