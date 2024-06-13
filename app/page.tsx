@@ -8,10 +8,12 @@ import WelcomeSection from './components/mainPage/welcome';
 import AboutSection from './components/mainPage/about';
 import ServicesSection from './components/mainPage/service';
 import Testimonials from './components/mainPage/testimonials';
+import CallToAction from './components/mainPage/action';
+import ContactSection from './components/mainPage/contact';
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br  from-black via-zinc-900 to-black text-white">
+    <div className="min-h-screen bg-gradient-to-br z-40  from-black via-zinc-900 to-black text-white">
       <Nav />
 
       <Hero />
@@ -23,6 +25,8 @@ export default function Page() {
         <AboutSection />
         <ServicesSection />
         <Testimonials />
+        <CallToAction />
+        <ContactSection />
         <section id="contact" className="py-20 bg-gray-800">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>

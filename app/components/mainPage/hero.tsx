@@ -6,10 +6,8 @@ import Background from "../background";
 
 const Hero = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+    <div
+      
       className={` bg-gradient-to-r relative from-black via-zinc-900 to-black py-24 px-4 sm:px-6 lg:px-8 text-center text-white`}
     >
         <Background />
@@ -39,7 +37,7 @@ const Hero = () => {
           Discover a world of creativity and skill with our expert in tattoos. Whether it&#39;s a classic design or something completely unique, we turn your ideas into stunning reality. Start your journey today.
         </motion.p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

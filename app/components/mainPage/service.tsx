@@ -73,7 +73,7 @@ const ServicesSection = () => {
               variants={{visible: {scale: 1, opacity: 1}}}
               initial={{scale: 0, opacity: 0}}
               animate={mainControls}
-              transition={{duration: 1, type: 'spring', stiffness: 100, delay: 0.25 * index}}
+              transition={{duration: 1, type: 'spring', stiffness: 100, delay: 0.5 * index}}
               className=" bg-gradient-to-b hover:shadow-md hover:shadow-orange-500 hover:cursor-pointer flex flex-col justify-center items-center from-zinc-900 via-zinc-800 to-zinc-900 w-[20%] h-[15rem] rounded-lg p-3 text-center"
             >
               <div className="mb-4">{service.icon}</div>
