@@ -21,7 +21,7 @@ const CallToAction = () => {
   return (
     <div
     ref={ref}
-      className="bg-gradient-to-r  relative flex flex-col justify-center items-center  h-[23rem] from-black via-zinc-900 to-black py-24 px-4 sm:px-6 lg:px-8 text-center text-white"
+      className="bg-gradient-to-r  relative flex flex-col justify-center items-center  h-[23rem] from-orange-600 via-orange-600 to-orange-600 py-24 px-4 sm:px-6 lg:px-8 text-center text-white"
     >
         <Background />
      
@@ -30,7 +30,7 @@ const CallToAction = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={mainControls}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-3xl sm:text-4xl font-bold mb-4 text-orange-500"
+          className="text-3xl sm:text-4xl font-bold mb-4 text-zinc-800"
         >
           Schedule Your Consultation
         </motion.h2>
@@ -45,7 +45,7 @@ const CallToAction = () => {
         </motion.p>
         <Link
           href="/contact" // Update this to your actual booking/contact page URL
-          className="inline-block z-30  hover:cursor-pointer px-6 py-3 text-lg font-semibold bg-orange-500 text-white rounded-md hover:bg-orange-600 transition duration-300"
+          className="inline-block z-30  hover:cursor-pointer px-6 py-3 text-lg font-light bg-zinc-800 text-white rounded-md hover:bg-zinc-900 hover:shadow-lg hover:font-extrabold hover:shadow-zinc-600 transition duration-300"
         >
           Schedule Your Consultation
         </Link>

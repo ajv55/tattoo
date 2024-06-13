@@ -1,45 +1,60 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useInView, useAnimation } from 'framer-motion';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import Background from '../background';
 import { useEffect, useRef } from 'react';
 
 const ContactSection = () => {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+    const mainControls = useAnimation();
+
+    useEffect(() => {
+        if(isInView){
+            mainControls.start('visible')
+        }
+    }, [isInView, mainControls])
+
   return (
-    <div
-      className="bg-gradient-to-r flex w-full  relative from-black via-zinc-900 to-black py-16 px-4 sm:px-6 lg:px-8 text-center text-white"
+    <div ref={ref}
+      className="bg-gradient-to-r flex w-full justify-evenly items-center relative from-black via-zinc-900 to-black py-16 px-4 sm:px-6 lg:px-8 text-center text-white"
     >
         <Background />
-      <div className="w-full  flex z-[400] mx-auto">
-        <div className='w-[67%] flex flex-col justify-center items-center'>
+      <div  className="w-full  flex z-[400] mx-auto">
+        <div className='w-[50%] flex flex-col justify-center items-center'>
         <motion.h2
+        variants={{visible: {y: 0, opacity: 1}}}
           initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={mainControls}
           transition={{ duration: 1, delay: 0.5 }}
           className="text-3xl sm:text-5xl font-bold mb-8 text-orange-500"
         >
           Contact Me
         </motion.h2>
         <motion.p
+        variants={{visible: {x: 0, opacity: 1 }}}
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          animate={mainControls}
           transition={{ duration: 1, delay: 1 }}
           className="text-lg mb-4"
         >
           Email: <a href={`mailto:artist@example.com`} className="text-orange-500 hover:underline">artist@example.com</a>
         </motion.p>
         <motion.p
+        variants={{visible: {x: 0, opacity: 1}}}
           initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          animate={mainControls}
           transition={{ duration: 1, delay: 1.5 }}
           className="text-lg mb-8"
         >
           Phone: <a href={`tel:+1234567890`} className="text-orange-500  hover:underline">+1234567890</a>
         </motion.p>
         <motion.div
+        variants={{visible: {scale: 1}}}
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          animate={mainControls}
           transition={{ duration: 0.5, delay: 2 }}
           className="flex  justify-center space-x-6 mb-8"
         >
@@ -53,10 +68,11 @@ const ContactSection = () => {
         </div>
 
         <motion.form
+        variants={{visible: { y: 0, opacity: 1}}}
           initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={mainControls}
           transition={{ duration: 1, delay: 2.5 }}
-          className=" bg-gradient-to-tr from-black to-zinc-900 w-[45%]  p-8 rounded-lg shadow-md"
+          className=" bg-gradient-to-tr shadow-orange-400 from-black to-zinc-900 w-[40%]  p-8 rounded-lg shadow-lg"
         >
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium text-orange-500">Name</label>
